@@ -4,10 +4,10 @@ coritsu_test
 playing with threejs and webgl
 
 ## setup
-* 'npm install && bower install'
+* `npm install && bower install`
 
 ## run app
-* 'grunt serve'
+* `grunt serve`
 
 ## run tests
-* 'grunt test'
+* `grunt test`
