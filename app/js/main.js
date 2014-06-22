@@ -10,7 +10,7 @@ function App() {
     //create 9 images and add to scene
     for(var row = -1; row < 2; row++) {
       for(var col = -1; col < 2; col++) {
-        var img = this.createImage();
+        var img = this._createImage();
         img.position.x = col * 500;
         img.position.y = row * 500;
 
@@ -26,7 +26,7 @@ function App() {
 
     document.querySelector('#test-container').appendChild(this.renderer.domElement);
     //add slider to body
-    this.slider = this.createSlider();
+    this.slider = this._createSlider();
     document.body.appendChild(this.slider);
 
     //rerender scene on window resize
@@ -43,7 +43,7 @@ function App() {
     this.renderer.render(this.scene, this.camera);
 }
 
-App.prototype.createImage = function() {
+App.prototype._createImage = function() {
     var geometry = new THREE.BoxGeometry(400, 400, 1);
     var map = THREE.ImageUtils.loadTexture('/img/cat.jpg', {}, function() {
       this.renderer.render(this.scene, this.camera);
@@ -56,7 +56,7 @@ App.prototype.createImage = function() {
     return mesh;
 };
 
-App.prototype.createSlider = function() {
+App.prototype._createSlider = function() {
     var slider = document.createElement('input');
     slider.style.width = '200px';
     slider.style.height = '25px';
