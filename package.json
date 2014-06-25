@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
+    "browserify": "^4.1.11",
+    "browserify-shim": "^3.6.0",
     "grunt": "~0.4.2",
     "grunt-bowercopy": "~0.7.1",
     "grunt-contrib-connect": "~0.6.0",
@@ -13,6 +15,14 @@
     "grunt-open": "^0.2.3",
     "load-grunt-tasks": "~0.3.0",
     "time-grunt": "~0.2.9"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "three": "global:THREE"
   },
   "scripts": {
     "install": "grunt bowercopy"
