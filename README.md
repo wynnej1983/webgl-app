@@ -1,5 +1,5 @@
-coritsu_test
-============
+THREE.js and webgl
+==================
 
 playing with threejs and webgl
 
